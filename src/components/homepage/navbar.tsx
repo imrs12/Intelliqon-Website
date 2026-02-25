@@ -47,8 +47,8 @@ export function Navbar() {
                 ].join(" ")}
             >
                 <div className="flex items-center justify-between h-14 sm:h-16">
-                    {/* Logo */}
-                    <a href="#home" className="text-xl sm:text-2xl font-bold text-[#ffffff] shrink-0 tracking-tight">
+                    {/* Logo — right on mobile, left on desktop */}
+                    <a href="#home" className="order-2 lg:order-1 text-xl sm:text-2xl font-bold text-[#ffffff] shrink-0 tracking-tight">
                         Intelliqon
                     </a>
 
@@ -115,12 +115,12 @@ export function Navbar() {
                         >
                             Our Philosophy
                         </a>
-                        {/* <a
+                        <a
                             href="#contact"
                             className="px-3 py-2 rounded-lg text-sm font-medium text-[#e2d5f3] hover:text-[#ffffff] hover:bg-[#ffffff]/10 transition-all duration-200"
                         >
                             Contact
-                        </a> */}
+                        </a>
                     </div>
 
                     {/* Desktop CTA */}
@@ -129,12 +129,12 @@ export function Navbar() {
                             className="bg-[#6C2BD9] hover:bg-[#5a24b8] text-[#ffffff] rounded-xl shadow-lg shadow-[#6C2BD9]/30 hover:shadow-[#6C2BD9]/50 transition-all duration-300 text-sm px-5"
                             asChild
                         >
-                            <a href="#contact">Contact Us</a>
+                            <a href="/sign-up">Sign Up</a>
                         </Button>
                     </div>
 
-                    {/* Mobile menu */}
-                    <div className="lg:hidden">
+                    {/* Mobile menu — left on mobile, right on desktop */}
+                    <div className="order-1 lg:order-3 lg:hidden">
                         <Sheet open={isOpen} onOpenChange={setIsOpen}>
                             <SheetTrigger asChild>
                                 <button
@@ -145,7 +145,7 @@ export function Navbar() {
                                 </button>
                             </SheetTrigger>
                             <SheetContent
-                                side="right"
+                                side="left"
                                 className="w-[300px] sm:w-[340px] bg-[#0f0524]/95 backdrop-blur-2xl border-l border-[#ffffff]/10 p-0"
                             >
                                 <div className="p-6">
@@ -218,7 +218,7 @@ export function Navbar() {
                                             onClick={() => setIsOpen(false)}
                                             asChild
                                         >
-                                            <a href="#contact">Contact Us</a>
+                                            <a href="/sign-up">Sign Up</a>
                                         </Button>
                                     </div>
                                 </div>
