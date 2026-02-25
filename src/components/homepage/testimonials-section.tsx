@@ -64,40 +64,38 @@ const testimonials = [
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
     return (
-        <div className="mx-3 w-[280px] sm:w-[320px] flex-shrink-0 rounded-2xl border border-[#e5e7eb] dark:border-[#334155] bg-white dark:bg-[#1e293b] p-6 shadow-sm relative flex flex-col gap-3">
-            <Quote className="absolute top-4 right-4 h-6 w-6 text-[#e9d5ff] dark:text-[#6C2BD9]/30" aria-hidden="true" />
-            <div className="flex gap-1">
+        <div className="mx-2 sm:mx-3 w-[240px] sm:w-[280px] lg:w-[320px] flex-shrink-0 rounded-xl sm:rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-5 lg:p-6 shadow-sm relative flex flex-col gap-2 sm:gap-3">
+            <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-5 w-5 sm:h-6 sm:w-6 text-purple-200 dark:text-violet-600/30" aria-hidden="true" />
+            <div className="flex gap-0.5 sm:gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-[#facc15] text-[#facc15]" />
+                    <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
                 ))}
             </div>
-            <p className="text-sm text-[#374151] dark:text-[#cbd5e1] leading-relaxed italic flex-grow">
+            <p className="text-xs sm:text-sm text-gray-700 dark:text-slate-300 leading-relaxed italic flex-grow">
                 {`"${testimonial.content}"`}
             </p>
-            <div className="pt-3 border-t border-[#f3f4f6] dark:border-[#334155] mt-auto">
-                <div className="font-bold text-[#111827] dark:text-[#f1f5f9] text-sm">{testimonial.name}</div>
-                <div className="text-xs text-[#6b7280] dark:text-[#64748b]">{testimonial.position}</div>
+            <div className="pt-2 sm:pt-3 border-t border-gray-100 dark:border-slate-700 mt-auto">
+                <div className="font-bold text-gray-900 dark:text-slate-100 text-xs sm:text-sm">{testimonial.name}</div>
+                <div className="text-xs text-gray-500 dark:text-slate-500">{testimonial.position}</div>
             </div>
         </div>
     );
 }
 
-
-
 export function TestimonialsSection() {
     return (
-        <section className="py-12 sm:py-16 lg:py-24 bg-[#f9fafb] dark:bg-[#0f172a] overflow-hidden">
+        <section className="py-10 sm:py-14 lg:py-20 bg-gray-50 dark:bg-slate-900 overflow-hidden">
             {/* Section Header */}
-            <div className="text-center max-w-3xl mx-auto px-4 mb-10 sm:mb-14">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] dark:text-[#f1f5f9] mb-4 text-balance">
+            <div className="text-center max-w-2xl mx-auto px-4 mb-8 sm:mb-10 lg:mb-14">
+                <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-slate-100 mb-3 sm:mb-4 text-balance">
                     Trusted by Businesses
                 </h2>
-                <p className="text-base sm:text-lg text-[#4b5563] dark:text-[#94a3b8]">
+                <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-slate-400">
                     See what our clients say about working with us
                 </p>
             </div>
 
-            <Marquee speed={40} pauseOnHover gradient={false}>
+            <Marquee speed={35} pauseOnHover gradient={false}>
                 {testimonials.map((t) => (
                     <TestimonialCard key={t.name} testimonial={t} />
                 ))}

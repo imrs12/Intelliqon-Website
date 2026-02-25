@@ -18,59 +18,60 @@ const quickLinks = [
 
 export function Footer() {
     return (
-        <footer id="contact" className="bg-[#111827] text-[#d1d5db]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-                {/* Logo & Tagline — always full width */}
-                <div className="flex flex-col gap-4 mb-8 sm:hidden">
-                    <a href="#home" className="text-2xl font-bold text-[#ffffff]">
+        <footer id="contact" className="bg-gray-900 text-gray-300">
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+
+                {/* Mobile: Logo + socials stacked */}
+                <div className="flex flex-col gap-3 mb-8 sm:hidden">
+                    <a href="#home" className="text-xl font-bold text-white">
                         Intelliqon
                     </a>
-                    <p className="text-[#9ca3af] italic text-sm">
+                    <p className="text-gray-400 italic text-xs sm:text-sm">
                         {'"Empowering Business with Innovative Solutions"'}
                     </p>
-                    <div className="flex gap-3 pt-2">
-                        <a href="#" className="w-10 h-10 bg-[#1f2937] rounded-lg flex items-center justify-center hover:bg-[#6C2BD9] transition-colors" aria-label="LinkedIn">
-                            <Linkedin className="h-5 w-5" />
+                    <div className="flex gap-2 pt-1">
+                        <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition-colors" aria-label="LinkedIn">
+                            <Linkedin className="h-4 w-4" />
                         </a>
-                        <a href="#" className="w-10 h-10 bg-[#1f2937] rounded-lg flex items-center justify-center hover:bg-[#6C2BD9] transition-colors" aria-label="Twitter">
-                            <Twitter className="h-5 w-5" />
+                        <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition-colors" aria-label="Twitter">
+                            <Twitter className="h-4 w-4" />
                         </a>
-                        <a href="#" className="w-10 h-10 bg-[#1f2937] rounded-lg flex items-center justify-center hover:bg-[#6C2BD9] transition-colors" aria-label="Instagram">
-                            <Instagram className="h-5 w-5" />
+                        <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition-colors" aria-label="Instagram">
+                            <Instagram className="h-4 w-4" />
                         </a>
                     </div>
                 </div>
 
-                {/* Main grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-10 sm:mb-12">
-                    {/* Logo & Tagline — hidden on mobile, shown sm+ */}
-                    <div className="hidden sm:flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
-                        <a href="#home" className="text-2xl font-bold text-[#ffffff]">
+                {/* Main grid — 2 cols on mobile, 4 on lg */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-10 lg:mb-12">
+                    {/* Logo block — hidden on mobile, shown sm+ */}
+                    <div className="hidden sm:flex flex-col gap-3 lg:col-span-1 col-span-2 sm:col-span-1">
+                        <a href="#home" className="text-xl lg:text-2xl font-bold text-white">
                             Intelliqon
                         </a>
-                        <p className="text-[#9ca3af] italic text-sm sm:text-base">
+                        <p className="text-gray-400 italic text-sm">
                             {'"Empowering Business with Innovative Solutions"'}
                         </p>
-                        <div className="flex gap-3 pt-2">
-                            <a href="#" className="w-10 h-10 bg-[#1f2937] rounded-lg flex items-center justify-center hover:bg-[#6C2BD9] transition-colors" aria-label="LinkedIn">
-                                <Linkedin className="h-5 w-5" />
+                        <div className="flex gap-2 sm:gap-3 pt-1 sm:pt-2">
+                            <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition-colors" aria-label="LinkedIn">
+                                <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-[#1f2937] rounded-lg flex items-center justify-center hover:bg-[#6C2BD9] transition-colors" aria-label="Twitter">
-                                <Twitter className="h-5 w-5" />
+                            <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition-colors" aria-label="Twitter">
+                                <Twitter className="h-4 w-4 sm:h-5 sm:w-5" />
                             </a>
-                            <a href="#" className="w-10 h-10 bg-[#1f2937] rounded-lg flex items-center justify-center hover:bg-[#6C2BD9] transition-colors" aria-label="Instagram">
-                                <Instagram className="h-5 w-5" />
+                            <a href="#" className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-violet-600 transition-colors" aria-label="Instagram">
+                                <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                             </a>
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-[#ffffff] font-semibold mb-4 text-sm sm:text-base">Quick Links</h4>
-                        <ul className="flex flex-col gap-3">
+                        <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Quick Links</h4>
+                        <ul className="flex flex-col gap-2 sm:gap-3">
                             {quickLinks.map((link) => (
                                 <li key={link.label}>
-                                    <a href={link.href} className="text-sm sm:text-base hover:text-[#6C2BD9] transition-colors">
+                                    <a href={link.href} className="text-xs sm:text-sm lg:text-base hover:text-violet-400 transition-colors">
                                         {link.label}
                                     </a>
                                 </li>
@@ -80,11 +81,11 @@ export function Footer() {
 
                     {/* Services */}
                     <div>
-                        <h4 className="text-[#ffffff] font-semibold mb-4 text-sm sm:text-base">Services</h4>
-                        <ul className="flex flex-col gap-3">
+                        <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
+                        <ul className="flex flex-col gap-2 sm:gap-3">
                             {services.map((service) => (
                                 <li key={service}>
-                                    <a href="#services" className="text-sm sm:text-base hover:text-[#6C2BD9] transition-colors">
+                                    <a href="#services" className="text-xs sm:text-sm lg:text-base hover:text-violet-400 transition-colors">
                                         {service}
                                     </a>
                                 </li>
@@ -94,17 +95,17 @@ export function Footer() {
 
                     {/* Contact */}
                     <div className="col-span-2 sm:col-span-1">
-                        <h4 className="text-[#ffffff] font-semibold mb-4 text-sm sm:text-base">Contact</h4>
-                        <ul className="flex flex-col gap-4">
-                            <li className="flex items-start gap-3">
-                                <Mail className="h-5 w-5 text-[#6C2BD9] mt-0.5 shrink-0" />
-                                <a href="mailto:support@intelliqon.com" className="text-sm sm:text-base hover:text-[#6C2BD9] transition-colors break-all">
+                        <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
+                        <ul className="flex flex-col gap-3 sm:gap-4">
+                            <li className="flex items-start gap-2 sm:gap-3">
+                                <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-violet-400 mt-0.5 shrink-0" />
+                                <a href="mailto:support@intelliqon.com" className="text-xs sm:text-sm lg:text-base hover:text-violet-400 transition-colors break-all">
                                     support@intelliqon.com
                                 </a>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <Phone className="h-5 w-5 text-[#6C2BD9] mt-0.5 shrink-0" />
-                                <a href="tel:+919167088519" className="text-sm sm:text-base hover:text-[#6C2BD9] transition-colors">
+                            <li className="flex items-start gap-2 sm:gap-3">
+                                <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-violet-400 mt-0.5 shrink-0" />
+                                <a href="tel:+919167088519" className="text-xs sm:text-sm lg:text-base hover:text-violet-400 transition-colors">
                                     +91-91670-88519
                                 </a>
                             </li>
@@ -113,7 +114,7 @@ export function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-[#1f2937] text-center text-xs sm:text-sm text-[#9ca3af]">
+                <div className="pt-6 sm:pt-8 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-500">
                     <p>{"© 2025 Intelliqon. All rights reserved."}</p>
                 </div>
             </div>

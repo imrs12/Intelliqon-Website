@@ -10,41 +10,41 @@ const stats = [
 
 export function AboutSection() {
     return (
-        <section id="philosophy" className="py-12 sm:py-16 lg:py-24 bg-[#ffffff] dark:bg-[#111827]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="philosophy" className="py-10 sm:py-14 lg:py-20 bg-white dark:bg-gray-900">
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     {/* Text Content */}
-                    <div className="flex flex-col gap-5 sm:gap-6 order-2 md:order-1">
+                    <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 order-2 md:order-1">
                         <div className="inline-block">
-                            <span className="text-[#6C2BD9] font-semibold text-sm uppercase tracking-wider bg-[#f3e8ff] dark:bg-[#6C2BD9]/20 px-4 py-2 rounded-full">
+                            <span className="text-violet-600 font-semibold text-xs sm:text-sm uppercase tracking-wider bg-purple-100 dark:bg-violet-600/20 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
                                 Who We Are
                             </span>
                         </div>
 
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] dark:text-[#f1f5f9] text-balance">
+                        <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-slate-100 text-balance">
                             Innovative Technology, Real Business Results
                         </h2>
 
-                        <p className="text-base sm:text-lg text-[#4b5563] dark:text-[#94a3b8] leading-relaxed">
+                        <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-slate-400 leading-relaxed">
                             Intelliqon is a premier technology consulting firm based in India, dedicated to
                             empowering businesses through cutting-edge AI, ML, and automation solutions. We
                             transform complex challenges into streamlined, innovative outcomes.
                         </p>
 
-                        <p className="text-base sm:text-lg text-[#4b5563] dark:text-[#94a3b8] leading-relaxed">
+                        <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-slate-400 leading-relaxed">
                             Our team of expert consultants brings deep industry knowledge and technical
                             excellence to deliver solutions that drive measurable business growth.
                         </p>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-4 sm:pt-8">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-2 sm:pt-4 lg:pt-6">
                             {stats.map((stat) => (
                                 <div key={stat.label} className="text-center lg:text-left">
-                                    <div className="inline-flex items-center justify-center w-12 h-12 bg-[#f3e8ff] dark:bg-[#6C2BD9]/20 rounded-lg mb-3">
-                                        <stat.icon className="h-6 w-6 text-[#6C2BD9]" />
+                                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 dark:bg-violet-600/20 rounded-lg mb-2 sm:mb-3">
+                                        <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-violet-600" />
                                     </div>
-                                    <div className="font-bold text-xl sm:text-2xl text-[#111827] dark:text-[#f1f5f9]">{stat.value}</div>
-                                    <div className="text-xs sm:text-sm text-[#4b5563] dark:text-[#94a3b8]">{stat.label}</div>
+                                    <div className="font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-slate-100">{stat.value}</div>
+                                    <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400">{stat.label}</div>
                                 </div>
                             ))}
                         </div>
@@ -52,7 +52,7 @@ export function AboutSection() {
 
                     {/* Image */}
                     <div className="relative order-1 md:order-2">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-xl sm:shadow-2xl">
                             <ImageWithFallback
                                 src="https://images.unsplash.com/photo-1764690690771-b4522d66b433?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNobm9sb2d5JTIwY29uc3VsdGluZyUyMHRlYW0lMjBtZWV0aW5nfGVufDF8fHx8MTc3MTk0NTk2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                                 alt="Technology consulting team in a meeting"
@@ -62,9 +62,9 @@ export function AboutSection() {
                             />
                         </div>
 
-                        {/* Decorative Elements - hidden on small screens */}
-                        <div className="hidden sm:block absolute -top-6 -right-6 w-24 h-24 bg-[#6C2BD9] rounded-2xl opacity-20 -z-10" aria-hidden="true" />
-                        <div className="hidden sm:block absolute -bottom-6 -left-6 w-32 h-32 bg-[#c084fc] rounded-2xl opacity-20 -z-10" aria-hidden="true" />
+                        {/* Decorative Elements */}
+                        <div className="hidden sm:block absolute -top-4 lg:-top-6 -right-4 lg:-right-6 w-16 lg:w-24 h-16 lg:h-24 bg-violet-600 rounded-2xl opacity-20 -z-10" aria-hidden="true" />
+                        <div className="hidden sm:block absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 w-24 lg:w-32 h-24 lg:h-32 bg-purple-400 rounded-2xl opacity-20 -z-10" aria-hidden="true" />
                     </div>
                 </div>
             </div>

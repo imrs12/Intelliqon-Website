@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function CTABanner() {
     return (
-        <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#6C2BD9] to-[#8B44E5] relative overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-violet-900 to-violet-700 relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10" aria-hidden="true">
                 <div
@@ -14,25 +14,25 @@ export function CTABanner() {
                 />
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <div className="max-w-3xl mx-auto flex flex-col items-center gap-4 sm:gap-6">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#ffffff] text-balance">
+            <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center gap-3 sm:gap-4 lg:gap-6">
+                    <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-balance">
                         Ready to Transform Your Business?
                     </h2>
 
-                    <p className="text-base sm:text-lg md:text-xl text-[#e9d5ff]">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-purple-200 px-2 sm:px-0">
                         {"Let\u2019s build something powerful together"}
                     </p>
 
-                    <div className="pt-2 sm:pt-4">
+                    <div className="pt-1 sm:pt-2 lg:pt-4">
                         <Button
                             size="lg"
-                            className="bg-[#ffffff] text-[#6C2BD9] hover:bg-[#f3f4f6] text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                            className="bg-white text-violet-600 hover:bg-gray-100 text-sm sm:text-base lg:text-lg px-5 sm:px-7 lg:px-8 py-4 sm:py-5 lg:py-6 shadow-lg hover:shadow-xl transition-all duration-300"
                             asChild
                         >
                             <a href="#contact">
                                 Get In Touch
-                                <ArrowRight className="ml-2 h-5 w-5" />
+                                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                             </a>
                         </Button>
                     </div>
