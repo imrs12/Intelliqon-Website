@@ -64,19 +64,19 @@ const testimonials = [
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
     return (
-        <div className="mx-3 w-[280px] sm:w-[320px] flex-shrink-0 rounded-2xl border border-[#e5e7eb] bg-white p-6 shadow-sm relative flex flex-col gap-3">
-            <Quote className="absolute top-4 right-4 h-6 w-6 text-[#e9d5ff]" aria-hidden="true" />
+        <div className="mx-3 w-[280px] sm:w-[320px] flex-shrink-0 rounded-2xl border border-[#e5e7eb] dark:border-[#334155] bg-white dark:bg-[#1e293b] p-6 shadow-sm relative flex flex-col gap-3">
+            <Quote className="absolute top-4 right-4 h-6 w-6 text-[#e9d5ff] dark:text-[#6C2BD9]/30" aria-hidden="true" />
             <div className="flex gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-[#facc15] text-[#facc15]" />
                 ))}
             </div>
-            <p className="text-sm text-[#374151] leading-relaxed italic flex-grow">
+            <p className="text-sm text-[#374151] dark:text-[#cbd5e1] leading-relaxed italic flex-grow">
                 {`"${testimonial.content}"`}
             </p>
-            <div className="pt-3 border-t border-[#f3f4f6] mt-auto">
-                <div className="font-bold text-[#111827] text-sm">{testimonial.name}</div>
-                <div className="text-xs text-[#6b7280]">{testimonial.position}</div>
+            <div className="pt-3 border-t border-[#f3f4f6] dark:border-[#334155] mt-auto">
+                <div className="font-bold text-[#111827] dark:text-[#f1f5f9] text-sm">{testimonial.name}</div>
+                <div className="text-xs text-[#6b7280] dark:text-[#64748b]">{testimonial.position}</div>
             </div>
         </div>
     );
@@ -86,13 +86,13 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
 export function TestimonialsSection() {
     return (
-        <section className="py-12 sm:py-16 lg:py-24 bg-[#f9fafb] overflow-hidden">
+        <section className="py-12 sm:py-16 lg:py-24 bg-[#f9fafb] dark:bg-[#0f172a] overflow-hidden">
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto px-4 mb-10 sm:mb-14">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] mb-4 text-balance">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111827] dark:text-[#f1f5f9] mb-4 text-balance">
                     Trusted by Businesses
                 </h2>
-                <p className="text-base sm:text-lg text-[#4b5563]">
+                <p className="text-base sm:text-lg text-[#4b5563] dark:text-[#94a3b8]">
                     See what our clients say about working with us
                 </p>
             </div>

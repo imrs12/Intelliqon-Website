@@ -10,6 +10,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const services = [
     "AI & ML",
@@ -51,6 +52,11 @@ export function Navbar() {
                     <a href="#home" className="order-2 lg:order-1 text-xl sm:text-2xl font-bold text-[#ffffff] shrink-0 tracking-tight">
                         Intelliqon
                     </a>
+
+                    {/* Mobile dark mode toggle */}
+                    <div className="order-3 lg:hidden">
+                        <ModeToggle />
+                    </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex lg:order-2 items-center gap-1">
@@ -124,7 +130,8 @@ export function Navbar() {
                     </div>
 
                     {/* Desktop CTA */}
-                    <div className="hidden lg:block lg:order-3">
+                    <div className="hidden lg:flex lg:order-3 items-center gap-2">
+                        <ModeToggle />
                         <Button
                             className="bg-[#6C2BD9] hover:bg-[#5a24b8] text-[#ffffff] rounded-xl shadow-lg shadow-[#6C2BD9]/30 hover:shadow-[#6C2BD9]/50 transition-all duration-300 text-sm px-5"
                             asChild
@@ -212,7 +219,11 @@ export function Navbar() {
                                         </a>
                                     </div>
 
-                                    <div className="mt-6 pt-6 border-t border-[#ffffff]/10">
+                                    <div className="mt-6 pt-6 border-t border-[#ffffff]/10 flex flex-col gap-3">
+                                        <div className="flex items-center justify-between px-1">
+                                            <span className="text-sm text-[#9ca3af]">Theme</span>
+                                            <ModeToggle />
+                                        </div>
                                         <Button
                                             className="w-full bg-[#6C2BD9] hover:bg-[#5a24b8] text-[#ffffff] rounded-xl shadow-lg shadow-[#6C2BD9]/30"
                                             onClick={() => setIsOpen(false)}
