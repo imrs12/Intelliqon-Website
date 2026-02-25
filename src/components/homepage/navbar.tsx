@@ -53,7 +53,7 @@ export function Navbar() {
                     </a>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center gap-1">
+                    <div className="hidden lg:flex lg:order-2 items-center gap-1">
                         <a
                             href="#home"
                             className="px-3 py-2 rounded-lg text-sm font-medium text-[#e2d5f3] hover:text-[#ffffff] hover:bg-[#ffffff]/10 transition-all duration-200"
@@ -124,7 +124,7 @@ export function Navbar() {
                     </div>
 
                     {/* Desktop CTA */}
-                    <div className="hidden lg:block">
+                    <div className="hidden lg:block lg:order-3">
                         <Button
                             className="bg-[#6C2BD9] hover:bg-[#5a24b8] text-[#ffffff] rounded-xl shadow-lg shadow-[#6C2BD9]/30 hover:shadow-[#6C2BD9]/50 transition-all duration-300 text-sm px-5"
                             asChild
@@ -133,8 +133,8 @@ export function Navbar() {
                         </Button>
                     </div>
 
-                    {/* Mobile menu — left on mobile, right on desktop */}
-                    <div className="order-1 lg:order-3 lg:hidden">
+                    {/* Mobile menu — left on mobile, hidden on desktop */}
+                    <div className="order-1 lg:hidden">
                         <Sheet open={isOpen} onOpenChange={setIsOpen}>
                             <SheetTrigger asChild>
                                 <button
