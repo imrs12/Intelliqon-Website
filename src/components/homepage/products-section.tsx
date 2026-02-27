@@ -28,7 +28,7 @@ export function ProductsSection() {
         <section
             id="products"
             className="py-10 sm:py-14 lg:py-20"
-            style={{ background: "linear-gradient(135deg, #384959 0%, #6A89A7 100%)" }}
+            style={{ background: "linear-gradient(135deg, #1F3A4E 0%, #3D5A7B 100%)" }}
         >
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
@@ -36,7 +36,7 @@ export function ProductsSection() {
                     <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 text-balance">
                         Our Products
                     </h2>
-                    <p className="text-sm sm:text-base lg:text-lg" style={{ color: "rgba(189,221,252,0.75)" }}>
+                    <p className="text-sm sm:text-base lg:text-lg" style={{ color: "rgba(127,175,209,0.85)" }}>
                         Proprietary software solutions built for industries
                     </p>
                 </div>
@@ -58,13 +58,13 @@ export function ProductsSection() {
                                 {product.title}
                             </h3>
 
-                            <p className="text-xs sm:text-sm lg:text-base mb-4 sm:mb-5 lg:mb-6 leading-relaxed flex-grow" style={{ color: "rgba(189,221,252,0.75)" }}>
+                            <p className="text-xs sm:text-sm lg:text-base mb-4 sm:mb-5 lg:mb-6 leading-relaxed flex-grow" style={{ color: "rgba(127,175,209,0.85)" }}>
                                 {product.description}
                             </p>
 
                             <Button
                                 variant="outline"
-                                className="w-full bg-transparent border-white/30 text-white hover:bg-white hover:text-[#384959] transition-all duration-300 mt-auto text-sm"
+                                className="w-full bg-transparent border-white/30 text-white hover:bg-white hover:text-[#1F3A4E] transition-all duration-300 mt-auto text-sm"
                             >
                                 Request Access
                             </Button>
@@ -73,7 +73,7 @@ export function ProductsSection() {
                 </div>
 
                 <div className="text-center mt-6 sm:mt-8 lg:mt-12">
-                    <p className="text-xs sm:text-sm" style={{ color: "rgba(189,221,252,0.6)" }}>
+                    <p className="text-xs sm:text-sm" style={{ color: "rgba(127,175,209,0.7)" }}>
                         * Access to products requires authentication
                     </p>
                 </div>

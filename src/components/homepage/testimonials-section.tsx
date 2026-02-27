@@ -65,7 +65,7 @@ const testimonials = [
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
     return (
         <div className="mx-2 sm:mx-3 w-[240px] sm:w-[280px] lg:w-[320px] flex-shrink-0 rounded-xl sm:rounded-2xl border border-border bg-white dark:bg-card p-4 sm:p-5 lg:p-6 shadow-sm relative flex flex-col gap-2 sm:gap-3">
-            <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-5 w-5 sm:h-6 sm:w-6 opacity-25" style={{ color: "#88BDF2" }} aria-hidden="true" />
+            <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-5 w-5 sm:h-6 sm:w-6 opacity-25" style={{ color: "#7FAFD1" }} aria-hidden="true" />
             <div className="flex gap-0.5 sm:gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />

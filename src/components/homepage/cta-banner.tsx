@@ -5,7 +5,7 @@ export function CTABanner() {
     return (
         <section
             className="py-12 sm:py-16 lg:py-24"
-            style={{ background: "linear-gradient(135deg, #6A89A7 0%, #384959 100%)" }}
+            style={{ background: "linear-gradient(135deg, #3D5A7B 0%, #1F3A4E 100%)" }}
         >
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div className="max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center gap-3 sm:gap-4 lg:gap-6">
@@ -20,8 +20,8 @@ export function CTABanner() {
                     <div className="pt-1 sm:pt-2 lg:pt-4">
                         <Button
                             size="lg"
-                            className="bg-white font-semibold text-sm sm:text-base lg:text-lg px-5 sm:px-7 lg:px-8 py-4 sm:py-5 lg:py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#BDDDFC]"
-                            style={{ color: "#384959" }}
+                            className="bg-white font-semibold text-sm sm:text-base lg:text-lg px-5 sm:px-7 lg:px-8 py-4 sm:py-5 lg:py-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-slate-100"
+                            style={{ color: "#1F3A4E" }}
                             asChild
                         >
                             <a href="#contact">

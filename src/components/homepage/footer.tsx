@@ -34,7 +34,7 @@ export function Footer() {
                             <a key={label} href="#" aria-label={label}
                                 className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
                                 style={{ background: "rgba(255,255,255,0.08)" }}
-                                onMouseEnter={e => (e.currentTarget.style.background = "#6A89A7")}
+                                onMouseEnter={e => (e.currentTarget.style.background = "#3D5A7B")}
                                 onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.08)")}
                             >
                                 <Icon className="h-4 w-4" />
@@ -56,7 +56,7 @@ export function Footer() {
                                 <a key={label} href="#" aria-label={label}
                                     className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center transition-colors"
                                     style={{ background: "rgba(255,255,255,0.08)" }}
-                                    onMouseEnter={e => (e.currentTarget.style.background = "#6A89A7")}
+                                    onMouseEnter={e => (e.currentTarget.style.background = "#3D5A7B")}
                                     onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.08)")}
                                 >
                                     <Icon className="h-4 w-4 sm:h-5 sm:w-5" />
@@ -98,13 +98,13 @@ export function Footer() {
                         <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Contact</h4>
                         <ul className="flex flex-col gap-3 sm:gap-4">
                             <li className="flex items-start gap-2 sm:gap-3">
-                                <Mail className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 shrink-0" style={{ color: "#88BDF2" }} />
+                                <Mail className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 shrink-0" style={{ color: "#7FAFD1" }} />
                                 <a href="mailto:support@intelliqon.com" className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors break-all">
                                     support@intelliqon.com
                                 </a>
                             </li>
                             <li className="flex items-start gap-2 sm:gap-3">
-                                <Phone className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 shrink-0" style={{ color: "#88BDF2" }} />
+                                <Phone className="h-4 w-4 sm:h-5 sm:w-5 mt-0.5 shrink-0" style={{ color: "#7FAFD1" }} />
                                 <a href="tel:+919167088519" className="text-xs sm:text-sm lg:text-base text-gray-300 hover:text-white transition-colors">
                                     +91-91670-88519
                                 </a>

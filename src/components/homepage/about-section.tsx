@@ -16,7 +16,7 @@ export function AboutSection() {
                     {/* Text Content */}
                     <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 order-2 md:order-1">
                         <div className="inline-block">
-                            <span className="font-semibold text-xs sm:text-sm uppercase tracking-wider px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[#6A89A7] dark:text-[#88BDF2] bg-[#BDDDFC]/30 dark:bg-[#88BDF2]/15">
+                            <span className="font-semibold text-xs sm:text-sm uppercase tracking-wider px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[#3D5A7B] dark:text-[#7FAFD1] bg-[#A8D1E8]/30 dark:bg-[#7FAFD1]/15">
                                 Who We Are
                             </span>
                         </div>
@@ -41,7 +41,7 @@ export function AboutSection() {
                             {stats.map((stat) => (
                                 <div key={stat.label} className="text-center lg:text-left">
                                     <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg mb-2 sm:mb-3 bg-[#BDDDFC]/40 dark:bg-[#88BDF2]/20">
-                                        <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#6A89A7] dark:text-[#88BDF2]" />
+                                        <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#3D5A7B] dark:text-[#7FAFD1]" />
                                     </div>
                                     <div className="font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-slate-100">{stat.value}</div>
                                     <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400">{stat.label}</div>
@@ -63,8 +63,8 @@ export function AboutSection() {
                         </div>
 
                         {/* Decorative Elements */}
-                        <div className="hidden sm:block absolute -top-4 lg:-top-6 -right-4 lg:-right-6 w-16 lg:w-24 h-16 lg:h-24 rounded-2xl opacity-25 -z-10" style={{ background: "#88BDF2" }} aria-hidden="true" />
-                        <div className="hidden sm:block absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 w-24 lg:w-32 h-24 lg:h-32 rounded-2xl opacity-20 -z-10" style={{ background: "#6A89A7" }} aria-hidden="true" />
+                        <div className="hidden sm:block absolute -top-4 lg:-top-6 -right-4 lg:-right-6 w-16 lg:w-24 h-16 lg:h-24 rounded-2xl opacity-25 -z-10" style={{ background: "#7FAFD1" }} aria-hidden="true" />
+                        <div className="hidden sm:block absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 w-24 lg:w-32 h-24 lg:h-32 rounded-2xl opacity-20 -z-10" style={{ background: "#3D5A7B" }} aria-hidden="true" />
                     </div>
                 </div>
             </div>

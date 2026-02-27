@@ -51,8 +51,8 @@ export function WhyChooseUsSection() {
                         >
                             <div className="flex flex-col sm:flex-row items-start gap-4">
                                 <div className="shrink-0">
-                                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#BDDDFC]/40 dark:bg-[#88BDF2]/20">
-                                        <feature.icon className="h-6 w-6 text-[#6A89A7] dark:text-[#88BDF2]" />
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#A8D1E8]/40 dark:bg-[#7FAFD1]/20">
+                                        <feature.icon className="h-6 w-6 text-[#3D5A7B] dark:text-[#7FAFD1]" />
                                     </div>
                                 </div>
 

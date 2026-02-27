@@ -57,7 +57,7 @@ export function Navbar() {
             >
                 <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
                     {/* Logo */}
-                    <a href="#home" className="order-2 lg:order-1 text-lg sm:text-xl lg:text-2xl font-bold text-white shrink-0 tracking-tight">
+                    <a href="#home" className="order-2 lg:order-1 text-lg sm:text-xl lg:text-2xl font-bold text-white shrink-0 tracking-tight lg:mr-auto pl-2 sm:pl-0">
                         Intelliqon
                     </a>
 
@@ -85,15 +85,15 @@ export function Navbar() {
                             <DropdownMenuContent
                                 align="start"
                                 sideOffset={12}
-                                className="w-52 rounded-xl shadow-xl"
+                                className="w-52 rounded-xl shadow-xl border border-white/20 bg-linear-to-br from-slate-800 to-slate-900"
                             >
                                 {services.map((service) => (
                                     <DropdownMenuItem
                                         key={service}
                                         asChild
-                                        className="cursor-pointer rounded-lg"
+                                        className="cursor-pointer px-2 py-1"
                                     >
-                                        <a href="#services" className="w-full">{service}</a>
+                                        <a href="#services" className="w-full px-3 py-2.5 text-sm text-white/80 hover:text-white hover:bg-[#0891b2]/20 transition-all duration-200 rounded-lg block">{service}</a>
                                     </DropdownMenuItem>
                                 ))}
                             </DropdownMenuContent>
@@ -109,15 +109,15 @@ export function Navbar() {
                             <DropdownMenuContent
                                 align="start"
                                 sideOffset={12}
-                                className="w-52 rounded-xl shadow-xl"
+                                className="w-52 rounded-xl shadow-xl border border-white/20 bg-linear-to-br from-slate-800 to-slate-900"
                             >
                                 {products.map((product) => (
                                     <DropdownMenuItem
                                         key={product}
                                         asChild
-                                        className="cursor-pointer rounded-lg"
+                                        className="cursor-pointer px-2 py-1"
                                     >
-                                        <a href="#products" className="w-full">{product}</a>
+                                        <a href="#products" className="w-full px-3 py-2.5 text-sm text-white/80 hover:text-white hover:bg-[#0891b2]/20 transition-all duration-200 rounded-lg block">{product}</a>
                                     </DropdownMenuItem>
                                 ))}
                             </DropdownMenuContent>
@@ -141,8 +141,8 @@ export function Navbar() {
                     <div className="hidden lg:flex lg:order-3 items-center gap-2">
                         <ModeToggle />
                         <Button
-                            className="text-white rounded-xl shadow-md transition-all duration-200 text-sm px-5 hover:opacity-90"
-                            style={{ background: "#6A89A7" }}
+                            className="text-white rounded-xl shadow-lg shadow-teal-500/30 transition-all duration-200 text-sm px-5 hover:shadow-teal-500/50 hover:opacity-95"
+                            style={{ background: "#0891b2" }}
                             asChild
                         >
                             <a href="/sign-up">Sign Up</a>
@@ -235,8 +235,8 @@ export function Navbar() {
                                             <ModeToggle />
                                         </div>
                                         <Button
-                                            className="w-full text-white rounded-xl shadow-md hover:opacity-90"
-                                            style={{ background: "#6A89A7" }}
+                                            className="w-full text-white rounded-xl shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:opacity-95"
+                                            style={{ background: "#0891b2" }}
                                             onClick={() => setIsOpen(false)}
                                             asChild
                                         >

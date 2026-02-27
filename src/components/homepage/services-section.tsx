@@ -85,7 +85,7 @@ export function ServicesSection() {
                                 >
                                     <Card className="p-4 sm:p-5 lg:p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-card border-border group cursor-pointer flex flex-col h-full">
                                         <div className="mb-3 sm:mb-4 lg:mb-6">
-                                            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl transition-colors duration-300 bg-[#BDDDFC]/40 dark:bg-[#88BDF2]/20">
+                                            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl transition-colors duration-300 bg-[#A8D1E8]/40 dark:bg-[#7FAFD1]/20">
                                                 <service.icon
                                                     className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-[#6A89A7] dark:text-[#88BDF2]"
                                                 />
