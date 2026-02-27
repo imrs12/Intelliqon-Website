@@ -59,7 +59,7 @@ const services = [
 
 export function ServicesSection() {
     return (
-        <section id="services" className="py-10 sm:py-14 lg:py-20 bg-gray-50 dark:bg-slate-900">
+        <section id="services" className="py-10 sm:py-14 lg:py-20 bg-secondary/30 dark:bg-background">
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
@@ -83,10 +83,12 @@ export function ServicesSection() {
                                     key={service.title}
                                     className="pl-3 sm:pl-4 basis-[85%] sm:basis-1/2 lg:basis-1/3"
                                 >
-                                    <Card className="p-4 sm:p-5 lg:p-6 hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-slate-800 border-gray-200 dark:border-slate-700 group cursor-pointer flex flex-col h-full">
+                                    <Card className="p-4 sm:p-5 lg:p-6 hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-card border-border group cursor-pointer flex flex-col h-full">
                                         <div className="mb-3 sm:mb-4 lg:mb-6">
-                                            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-purple-100 dark:bg-violet-600/20 rounded-xl group-hover:bg-violet-600 transition-colors duration-300">
-                                                <service.icon className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-violet-600 group-hover:text-white transition-colors duration-300" />
+                                            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl transition-colors duration-300 bg-[#BDDDFC]/40 dark:bg-[#88BDF2]/20">
+                                                <service.icon
+                                                    className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-[#6A89A7] dark:text-[#88BDF2]"
+                                                />
                                             </div>
                                         </div>
 
@@ -100,7 +102,8 @@ export function ServicesSection() {
 
                                         <a
                                             href="#contact"
-                                            className="inline-flex items-center text-violet-600 font-semibold text-sm lg:text-base transition-all duration-300 mt-auto"
+                                            className="inline-flex items-center font-semibold text-sm lg:text-base transition-all duration-300 mt-auto"
+                                            style={{ color: "#6A89A7" }}
                                         >
                                             Learn More
                                             <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />

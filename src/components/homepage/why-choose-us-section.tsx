@@ -30,7 +30,7 @@ const features = [
 
 export function WhyChooseUsSection() {
     return (
-        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
@@ -47,12 +47,12 @@ export function WhyChooseUsSection() {
                     {features.map((feature) => (
                         <Card
                             key={feature.title}
-                            className="p-6 sm:p-8 border-gray-200 dark:border-slate-700 hover:border-violet-600 transition-all duration-300 bg-white dark:bg-slate-800"
+                            className="p-6 sm:p-8 border-border hover:shadow-md transition-all duration-300 bg-white dark:bg-card"
                         >
                             <div className="flex flex-col sm:flex-row items-start gap-4">
                                 <div className="shrink-0">
-                                    <div className="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-violet-600/20 rounded-lg">
-                                        <feature.icon className="h-6 w-6 text-violet-600" />
+                                    <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#BDDDFC]/40 dark:bg-[#88BDF2]/20">
+                                        <feature.icon className="h-6 w-6 text-[#6A89A7] dark:text-[#88BDF2]" />
                                     </div>
                                 </div>
 

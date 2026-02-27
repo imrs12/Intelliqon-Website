@@ -43,9 +43,17 @@ export function Navbar() {
                 className={[
                     "w-full rounded-xl sm:rounded-2xl border px-3 sm:px-5 lg:px-8 transition-all duration-500",
                     scrolled
-                        ? "bg-purple-950/80 backdrop-blur-xl border-white/10 shadow-lg shadow-violet-600/10"
-                        : "bg-white/5 backdrop-blur-xl border-white/10",
+                        ? "backdrop-blur-2xl border-white/20 shadow-xl"
+                        : "backdrop-blur-xl border-white/10",
                 ].join(" ")}
+                style={{
+                    background: scrolled
+                        ? "linear-gradient(135deg, rgba(56,73,89,0.45) 0%, rgba(106,137,167,0.30) 100%)"
+                        : "linear-gradient(135deg, rgba(56,73,89,0.18) 0%, rgba(106,137,167,0.10) 100%)",
+                    boxShadow: scrolled
+                        ? "0 8px 32px rgba(26,43,56,0.25), inset 0 1px 0 rgba(255,255,255,0.12)"
+                        : "0 4px 16px rgba(26,43,56,0.10), inset 0 1px 0 rgba(255,255,255,0.08)",
+                }}
             >
                 <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
                     {/* Logo */}
@@ -62,7 +70,7 @@ export function Navbar() {
                     <div className="hidden lg:flex lg:order-2 items-center gap-1">
                         <a
                             href="#home"
-                            className="px-3 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
+                            className="px-3 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200"
                         >
                             Home
                         </a>
@@ -70,20 +78,20 @@ export function Navbar() {
                         {/* Services Dropdown */}
                         <DropdownMenu modal={false}>
                             <DropdownMenuTrigger asChild>
-                                <button className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200 outline-none ring-0 border-0 bg-transparent">
+                                <button className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 outline-none ring-0 border-0 bg-transparent">
                                     Services <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-60" />
                                 </button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent
                                 align="start"
                                 sideOffset={12}
-                                className="w-52 bg-purple-950/95 backdrop-blur-xl border-white/10 rounded-xl shadow-xl shadow-black/20"
+                                className="w-52 rounded-xl shadow-xl"
                             >
                                 {services.map((service) => (
                                     <DropdownMenuItem
                                         key={service}
                                         asChild
-                                        className="text-purple-100 hover:text-white focus:text-white hover:bg-white/10 focus:bg-white/10 cursor-pointer rounded-lg"
+                                        className="cursor-pointer rounded-lg"
                                     >
                                         <a href="#services" className="w-full">{service}</a>
                                     </DropdownMenuItem>
@@ -94,20 +102,20 @@ export function Navbar() {
                         {/* Products Dropdown */}
                         <DropdownMenu modal={false}>
                             <DropdownMenuTrigger asChild>
-                                <button className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200 outline-none ring-0 border-0 bg-transparent">
+                                <button className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 outline-none ring-0 border-0 bg-transparent">
                                     Products <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-60" />
                                 </button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent
                                 align="start"
                                 sideOffset={12}
-                                className="w-52 bg-purple-950/95 backdrop-blur-xl border-white/10 rounded-xl shadow-xl shadow-black/20"
+                                className="w-52 rounded-xl shadow-xl"
                             >
                                 {products.map((product) => (
                                     <DropdownMenuItem
                                         key={product}
                                         asChild
-                                        className="text-purple-100 hover:text-white focus:text-white hover:bg-white/10 focus:bg-white/10 cursor-pointer rounded-lg"
+                                        className="cursor-pointer rounded-lg"
                                     >
                                         <a href="#products" className="w-full">{product}</a>
                                     </DropdownMenuItem>
@@ -117,13 +125,13 @@ export function Navbar() {
 
                         <a
                             href="#philosophy"
-                            className="px-3 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
+                            className="px-3 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200"
                         >
                             Our Philosophy
                         </a>
                         <a
                             href="#contact"
-                            className="px-3 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
+                            className="px-3 py-2 rounded-lg text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200"
                         >
                             Contact
                         </a>
@@ -133,7 +141,8 @@ export function Navbar() {
                     <div className="hidden lg:flex lg:order-3 items-center gap-2">
                         <ModeToggle />
                         <Button
-                            className="bg-violet-600 hover:bg-violet-700 text-white rounded-xl shadow-lg shadow-violet-600/30 hover:shadow-violet-600/50 transition-all duration-300 text-sm px-5"
+                            className="text-white rounded-xl shadow-md transition-all duration-200 text-sm px-5 hover:opacity-90"
+                            style={{ background: "#6A89A7" }}
                             asChild
                         >
                             <a href="/sign-up">Sign Up</a>
@@ -153,7 +162,8 @@ export function Navbar() {
                             </SheetTrigger>
                             <SheetContent
                                 side="left"
-                                className="w-[280px] sm:w-[320px] bg-purple-950/95 backdrop-blur-2xl border-l border-white/10 p-0"
+                                className="w-[280px] sm:w-[320px] backdrop-blur-2xl border-r border-white/10 p-0"
+                                style={{ background: "rgba(56,73,89,0.97)" }}
                             >
                                 <div className="p-5 sm:p-6">
                                     <SheetTitle className="text-lg sm:text-xl font-bold text-white mb-6 sm:mb-8">
@@ -163,7 +173,7 @@ export function Navbar() {
                                     <div className="flex flex-col gap-1">
                                         <a
                                             href="#home"
-                                            className="px-3 py-2.5 rounded-xl text-purple-100 hover:text-white hover:bg-white/10 transition-all font-medium text-sm sm:text-base"
+                                            className="px-3 py-2.5 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-all font-medium text-sm sm:text-base"
                                             onClick={() => setIsOpen(false)}
                                         >
                                             Home
@@ -171,14 +181,14 @@ export function Navbar() {
 
                                         {/* Services */}
                                         <div className="mt-2">
-                                            <p className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-violet-400">
+                                            <p className="px-3 py-2 text-xs font-semibold uppercase tracking-widest" style={{ color: "#88BDF2" }}>
                                                 Services
                                             </p>
                                             {services.map((service) => (
                                                 <a
                                                     key={service}
                                                     href="#services"
-                                                    className="block px-3 py-2 pl-6 rounded-xl text-sm text-purple-200 hover:text-white hover:bg-white/10 transition-all"
+                                                    className="block px-3 py-2 pl-6 rounded-xl text-sm text-white/70 hover:text-white hover:bg-white/10 transition-all"
                                                     onClick={() => setIsOpen(false)}
                                                 >
                                                     {service}
@@ -188,14 +198,14 @@ export function Navbar() {
 
                                         {/* Products */}
                                         <div className="mt-2">
-                                            <p className="px-3 py-2 text-xs font-semibold uppercase tracking-widest text-violet-400">
+                                            <p className="px-3 py-2 text-xs font-semibold uppercase tracking-widest" style={{ color: "#88BDF2" }}>
                                                 Products
                                             </p>
                                             {products.map((product) => (
                                                 <a
                                                     key={product}
                                                     href="#products"
-                                                    className="block px-3 py-2 pl-6 rounded-xl text-sm text-purple-200 hover:text-white hover:bg-white/10 transition-all"
+                                                    className="block px-3 py-2 pl-6 rounded-xl text-sm text-white/70 hover:text-white hover:bg-white/10 transition-all"
                                                     onClick={() => setIsOpen(false)}
                                                 >
                                                     {product}
@@ -205,14 +215,14 @@ export function Navbar() {
 
                                         <a
                                             href="#philosophy"
-                                            className="px-3 py-2.5 rounded-xl text-purple-100 hover:text-white hover:bg-white/10 transition-all font-medium mt-2 text-sm sm:text-base"
+                                            className="px-3 py-2.5 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-all font-medium mt-2 text-sm sm:text-base"
                                             onClick={() => setIsOpen(false)}
                                         >
                                             Our Philosophy
                                         </a>
                                         <a
                                             href="#contact"
-                                            className="px-3 py-2.5 rounded-xl text-purple-100 hover:text-white hover:bg-white/10 transition-all font-medium text-sm sm:text-base"
+                                            className="px-3 py-2.5 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-all font-medium text-sm sm:text-base"
                                             onClick={() => setIsOpen(false)}
                                         >
                                             Contact
@@ -221,11 +231,12 @@ export function Navbar() {
 
                                     <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-3">
                                         <div className="flex items-center justify-between px-1">
-                                            <span className="text-sm text-gray-400">Theme</span>
+                                            <span className="text-sm text-white/50">Theme</span>
                                             <ModeToggle />
                                         </div>
                                         <Button
-                                            className="w-full bg-violet-600 hover:bg-violet-700 text-white rounded-xl shadow-lg shadow-violet-600/30"
+                                            className="w-full text-white rounded-xl shadow-md hover:opacity-90"
+                                            style={{ background: "#6A89A7" }}
                                             onClick={() => setIsOpen(false)}
                                             asChild
                                         >

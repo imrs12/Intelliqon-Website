@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/homepage/navbar";
 import { AboutSection } from "@/components/homepage/about-section";
 import { CTABanner } from "@/components/homepage/cta-banner";
 import { HeroSection } from "@/components/homepage/hero-section";
@@ -10,7 +11,7 @@ import { Footer } from "@/components/homepage/footer";
 export default function Home() {
   return (
     <div>
-      {/* <Navbar /> */}
+      <Navbar />
       <main>
         <HeroSection />
         <AboutSection />

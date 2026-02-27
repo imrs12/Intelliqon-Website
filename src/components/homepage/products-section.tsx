@@ -25,14 +25,18 @@ const products = [
 
 export function ProductsSection() {
     return (
-        <section id="products" className="py-10 sm:py-14 lg:py-20 bg-gradient-to-br from-violet-900 to-violet-700">
+        <section
+            id="products"
+            className="py-10 sm:py-14 lg:py-20"
+            style={{ background: "linear-gradient(135deg, #384959 0%, #6A89A7 100%)" }}
+        >
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16">
                     <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 text-balance">
                         Our Products
                     </h2>
-                    <p className="text-sm sm:text-base lg:text-lg text-purple-200">
+                    <p className="text-sm sm:text-base lg:text-lg" style={{ color: "rgba(189,221,252,0.75)" }}>
                         Proprietary software solutions built for industries
                     </p>
                 </div>
@@ -42,7 +46,7 @@ export function ProductsSection() {
                     {products.map((product) => (
                         <Card
                             key={product.title}
-                            className="p-4 sm:p-6 lg:p-8 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 flex flex-col"
+                            className="p-4 sm:p-6 lg:p-8 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 flex flex-col"
                         >
                             <div className="mb-3 sm:mb-4 lg:mb-6">
                                 <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-white/20 backdrop-blur-sm rounded-xl">
@@ -54,13 +58,13 @@ export function ProductsSection() {
                                 {product.title}
                             </h3>
 
-                            <p className="text-xs sm:text-sm lg:text-base text-purple-200 mb-4 sm:mb-5 lg:mb-6 leading-relaxed flex-grow">
+                            <p className="text-xs sm:text-sm lg:text-base mb-4 sm:mb-5 lg:mb-6 leading-relaxed flex-grow" style={{ color: "rgba(189,221,252,0.75)" }}>
                                 {product.description}
                             </p>
 
                             <Button
                                 variant="outline"
-                                className="w-full bg-transparent border-white/30 text-white hover:bg-white hover:text-violet-600 transition-all duration-300 mt-auto text-sm"
+                                className="w-full bg-transparent border-white/30 text-white hover:bg-white hover:text-[#384959] transition-all duration-300 mt-auto text-sm"
                             >
                                 Request Access
                             </Button>
@@ -69,7 +73,7 @@ export function ProductsSection() {
                 </div>
 
                 <div className="text-center mt-6 sm:mt-8 lg:mt-12">
-                    <p className="text-purple-200 text-xs sm:text-sm">
+                    <p className="text-xs sm:text-sm" style={{ color: "rgba(189,221,252,0.6)" }}>
                         * Access to products requires authentication
                     </p>
                 </div>

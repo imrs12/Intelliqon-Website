@@ -64,8 +64,8 @@ const testimonials = [
 
 function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] }) {
     return (
-        <div className="mx-2 sm:mx-3 w-[240px] sm:w-[280px] lg:w-[320px] flex-shrink-0 rounded-xl sm:rounded-2xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 sm:p-5 lg:p-6 shadow-sm relative flex flex-col gap-2 sm:gap-3">
-            <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-5 w-5 sm:h-6 sm:w-6 text-purple-200 dark:text-violet-600/30" aria-hidden="true" />
+        <div className="mx-2 sm:mx-3 w-[240px] sm:w-[280px] lg:w-[320px] flex-shrink-0 rounded-xl sm:rounded-2xl border border-border bg-white dark:bg-card p-4 sm:p-5 lg:p-6 shadow-sm relative flex flex-col gap-2 sm:gap-3">
+            <Quote className="absolute top-3 right-3 sm:top-4 sm:right-4 h-5 w-5 sm:h-6 sm:w-6 opacity-25" style={{ color: "#88BDF2" }} aria-hidden="true" />
             <div className="flex gap-0.5 sm:gap-1">
                 {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-yellow-400 text-yellow-400" />
@@ -84,7 +84,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
 
 export function TestimonialsSection() {
     return (
-        <section className="py-10 sm:py-14 lg:py-20 bg-gray-50 dark:bg-slate-900 overflow-hidden">
+        <section className="py-10 sm:py-14 lg:py-20 bg-secondary/30 dark:bg-background overflow-hidden">
             {/* Section Header */}
             <div className="text-center max-w-2xl mx-auto px-4 mb-8 sm:mb-10 lg:mb-14">
                 <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-slate-100 mb-3 sm:mb-4 text-balance">

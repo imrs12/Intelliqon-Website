@@ -10,13 +10,13 @@ const stats = [
 
 export function AboutSection() {
     return (
-        <section id="philosophy" className="py-10 sm:py-14 lg:py-20 bg-white dark:bg-gray-900">
+        <section id="philosophy" className="py-10 sm:py-14 lg:py-20 bg-white dark:bg-background">
             <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                     {/* Text Content */}
                     <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 order-2 md:order-1">
                         <div className="inline-block">
-                            <span className="text-violet-600 font-semibold text-xs sm:text-sm uppercase tracking-wider bg-purple-100 dark:bg-violet-600/20 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                            <span className="font-semibold text-xs sm:text-sm uppercase tracking-wider px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[#6A89A7] dark:text-[#88BDF2] bg-[#BDDDFC]/30 dark:bg-[#88BDF2]/15">
                                 Who We Are
                             </span>
                         </div>
@@ -40,8 +40,8 @@ export function AboutSection() {
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-2 sm:pt-4 lg:pt-6">
                             {stats.map((stat) => (
                                 <div key={stat.label} className="text-center lg:text-left">
-                                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 dark:bg-violet-600/20 rounded-lg mb-2 sm:mb-3">
-                                        <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-violet-600" />
+                                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg mb-2 sm:mb-3 bg-[#BDDDFC]/40 dark:bg-[#88BDF2]/20">
+                                        <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#6A89A7] dark:text-[#88BDF2]" />
                                     </div>
                                     <div className="font-bold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-slate-100">{stat.value}</div>
                                     <div className="text-xs sm:text-sm text-gray-600 dark:text-slate-400">{stat.label}</div>
@@ -63,8 +63,8 @@ export function AboutSection() {
                         </div>
 
                         {/* Decorative Elements */}
-                        <div className="hidden sm:block absolute -top-4 lg:-top-6 -right-4 lg:-right-6 w-16 lg:w-24 h-16 lg:h-24 bg-violet-600 rounded-2xl opacity-20 -z-10" aria-hidden="true" />
-                        <div className="hidden sm:block absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 w-24 lg:w-32 h-24 lg:h-32 bg-purple-400 rounded-2xl opacity-20 -z-10" aria-hidden="true" />
+                        <div className="hidden sm:block absolute -top-4 lg:-top-6 -right-4 lg:-right-6 w-16 lg:w-24 h-16 lg:h-24 rounded-2xl opacity-25 -z-10" style={{ background: "#88BDF2" }} aria-hidden="true" />
+                        <div className="hidden sm:block absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 w-24 lg:w-32 h-24 lg:h-32 rounded-2xl opacity-20 -z-10" style={{ background: "#6A89A7" }} aria-hidden="true" />
                     </div>
                 </div>
             </div>
